@@ -1,7 +1,6 @@
 use diesel::{Insertable, Queryable, Identifiable};
-use async_graphql::*;
+use async_graphql::SimpleObject;
 use crate::schema::user;
-use diesel::prelude::*;
 
 #[derive(Insertable, Queryable, Identifiable, SimpleObject, Debug, Clone)]
 #[table_name = "user"]

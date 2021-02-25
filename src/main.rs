@@ -3,15 +3,11 @@ use warp::*;
 use warp_test_2::db;
 use warp_test_2::graphql::graphql_context::GraphqlContext;
 use std::convert::Infallible;
-use async_graphql::{EmptyMutation, EmptySubscription, Schema};
 use async_graphql::http::GraphQLPlaygroundConfig;
 use async_graphql::http::playground_source;
-use warp_test_2::graphql::graphql_schema::{Query, MySchema};
+use warp_test_2::graphql::graphql_schema::MySchema;
 use warp_test_2::graphql::graphql_schema::schema;
 use std::error::Error;
-use async_graphql_warp::{graphql};
-use hyper::{Response, StatusCode};
-
 
 #[tokio::main]
 async fn main() -> Result<(), Box<dyn Error>> {

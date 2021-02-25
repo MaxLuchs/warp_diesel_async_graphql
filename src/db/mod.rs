@@ -1,8 +1,6 @@
-use postgres::{NoTls, Config};
-use r2d2::{Pool, ManageConnection};
+use r2d2::Pool;
 use diesel::r2d2::ConnectionManager;
 use diesel::PgConnection;
-use eyre::Error;
 
 pub struct DB {
     pub pool: Pool<ConnectionManager<PgConnection>>

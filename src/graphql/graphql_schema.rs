@@ -1,13 +1,9 @@
 use crate::graphql::graphql_context::GraphqlContext;
 use crate::models::user_model::User;
 use crate::schema;
-use diesel::{QueryDsl, RunQueryDsl, BoolExpressionMethods, QueryResult};
+use diesel::{QueryDsl, RunQueryDsl, BoolExpressionMethods};
 use async_graphql::{Result, Object, InputObject, Context, Schema, EmptyMutation, EmptySubscription};
-use async_graphql::connection::query;
 use crate::diesel::ExpressionMethods;
-use std::error::Error;
-use eyre::WrapErr;
-use std::sync::Arc;
 
 pub struct Query {}
 
